@@ -17,7 +17,7 @@ async function main(){
         console.log("Connected to MongoDB")
     })
     .catch((err) => {
-        console.log("App Crashed")
+        console.log(err,"App Crashed")
     })
     app.listen(3000, () => {
     console.log("Server is rinning in the localhost 3000")
