@@ -2,6 +2,8 @@ const {Schema} = require("mongoose");
 const mongoose = require("mongoose");
 const { ObjectId } = require("mongoose");
 
+mongoose.connect(process.env.MONGO_URL)
+
 const userSchema = new Schema({
     email: String,
     password: String,
