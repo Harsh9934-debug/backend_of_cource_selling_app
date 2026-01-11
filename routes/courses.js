@@ -1,12 +1,14 @@
-const express=require("express");
-const router=express.Router();
+const { Router } = require("express");
+const coursesRouter = Router();
 
-router.post('/purchage',(req,res)=>{ 
+coursesRouter.post('/purchage', (req, res) => {
     res.send("to purchage a course")
 })
 
-router.get('/purchage-a-course',(req,res)=>{
+coursesRouter.get('/purchage-a-course', (req, res) => {
     res.send("purchage-a-course")
 })
 
-module.exports = router;
+module.exports = {
+    coursesRouter: coursesRouter
+};

@@ -1,16 +1,18 @@
-const express = require("express");
-const router = express.Router();
+const router = require("express");
+const userRouter = router.Router(); 
 
-router.post('/login',(req,res)=>{
+userRouter.post('/login',(req,res)=>{
     res.send("login")
-})
+}) 
 
-router.post('/signup',(req,res)=>{
+userRouter.post('/signup',(req,res)=>{
    res.send("signup") 
 })
 
-router.get('/purchages',(req,res)=>{
+userRouter.get('/purchages',(req,res)=>{
    res.send("purchages") 
 })
 
-module.exports = router;
+module.exports = {
+    userRouter:userRouter
+};

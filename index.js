@@ -1,10 +1,12 @@
 const express = require("express");
+const { userRouter } = require("./routes/user");
+const { coursesRouter } = require("./routes/courses");
 
 const app = express();
 
-app.use("/user",require("./routes/user"))
-app.use("/courses",require("./routes/courses"))
+app.use("/user", userRouter);
+app.use("/courses", coursesRouter);
 
-app.listen(3000,()=>{
+app.listen(3000, () => {
     console.log("Server is rinning in the localhost 3000")
 })
